@@ -1,0 +1,19 @@
+<header class="w-full h-12 bg-violet-950 text-violet-50">
+	<nav class="flex flex-row justify-between items-center h-full">
+		<!--		Logo-Company Name-->
+		<%= link_to root_path, class:" w-auto md:w-1/4" do %>
+			<span> Logo</span>
+			<span> Chipping At Rails</span>
+		<% end %>
+
+		<!--		Menu Button-->
+		<%= button_tag type:"button", class: "bg-red-900 visible md:hidden" do %>
+			open
+		<% end %>
+		<!--		Menu list-->
+		<ul class="absolute top-12 left-0 bg-violet-800 w-full text-right px-6 h-screen md:relative md:top-auto md:left-auto md:h-auto md:bg-transparent">
+			<li class="my-3 mr-0 text-violet-600 md:my-0 md:inline-block md:px-12"><%= link_to_unless_current("Projects", { controller: "static_pages", action: "projects" }, class: "text-violet-50") %></li>
+			<li class="my-3 mr-0 text-violet-600 md:my-0 md:inline-block md:px-12"><%= link_to_unless_current("Contact", { controller: "static_pages", action: "contact" }, class: "text-violet-50") %></li>
+		</ul>
+	</nav>
+</header>
